@@ -1,0 +1,16 @@
+{
+  "short_name": "Kesef Finance",
+  "name": "Kesef Finance",
+  "description": "Your go-to strongest defi yield farm on the Binance Smart Chain.",
+  "icons": [
+    {
+      "src": "logo.svg",
+      "type": "image/svg",
+      "sizes": "256x256"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
