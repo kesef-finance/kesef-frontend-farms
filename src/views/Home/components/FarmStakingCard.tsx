@@ -18,7 +18,7 @@ import { getBalanceNumber } from '../../../utils/formatBalance'
 const StyledFarmStakingCard = styled(Card)`
   background-image: url('/images/logo.svg');
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 43%;
   background-position: center right;
   min-height: 376px;
 `
@@ -42,8 +42,13 @@ const Label = styled.div`
 `
 
 const Actions = styled.div`
-  margin-top: 7rem;
+  margin-top: 4rem;
 `
+
+// CardBody = styled.div`
+//     background: #ffffff9e;
+//     backdrop-filter: blur(1px);
+// `
 
 const FarmedStakingCard = () => {
   const [pendingTx, setPendingTx] = useState(false)
