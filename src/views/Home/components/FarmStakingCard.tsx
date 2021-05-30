@@ -42,7 +42,7 @@ const Label = styled.div`
 `
 
 const Actions = styled.div`
-  margin-top: 4rem;
+  margin-top: 6rem;
 `
 
 // CardBody = styled.div`
