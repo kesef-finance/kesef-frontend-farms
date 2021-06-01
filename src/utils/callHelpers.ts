@@ -104,3 +104,21 @@ export const soushHarvestBnb = async (sousChefContract, account) => {
       return tx.transactionHash
     })
 }
+
+export const migrateApproval = async (oldContract, account, value) => {
+  return oldContract.methods
+    .approve(account, value)
+    .send({ from: account, value: new BigNumber(0) })
+    .on('transactionHash', (tx) => {
+      return tx.transactionHash
+    })
+}
+
+export const migrate = async (migrateContract, account) => {
+  return migrateContract.methods
+    .migrate()
+    .send({ from: account, value: new BigNumber(0) })
+    .on('transactionHash', (tx) => {
+      return tx.transactionHash
+    })
+}

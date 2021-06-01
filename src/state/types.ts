@@ -39,9 +39,14 @@ export interface PoolsState {
   data: Pool[]
 }
 
+export interface MigrateState {
+  data: string
+}
+
 // Global state
 
 export interface State {
   farms: FarmsState
   pools: PoolsState
+  migrate: MigrateState
 }

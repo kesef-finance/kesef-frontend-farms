@@ -23,3 +23,9 @@ export const getLotteryAddress = () => {
 export const getLotteryTicketAddress = () => {
   return addresses.lotteryNFT[chainId]
 }
+export const getMigrateAddress = () => {
+  return addresses.migrate[chainId]
+}
+export const getOldMigrateAddress = () => {
+  return addresses.oldmigrate[chainId]
+}

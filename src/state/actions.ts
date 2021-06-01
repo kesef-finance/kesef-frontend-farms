@@ -7,3 +7,6 @@ export {
   updateUserPendingReward,
   updateUserStakedBalance,
 } from './pools'
+export {
+  fetchOldMigrateBalanceAsync
+} from './migrate'

@@ -19,6 +19,8 @@ const Farms = lazy(() => import('./views/Farms'))
 const NotFound = lazy(() => import('./views/NotFound'))
 // const Nft = lazy(() => import('./views/Nft'))
 
+const Migrate = lazy(() => import('./views/Migrate'))
+
 // This config is required for number formating
 BigNumber.config({
   EXPONENTIAL_AT: 1000,
@@ -51,6 +53,10 @@ const App: React.FC = () => {
             <Route path="/mining">
               <Farms tokenMode />
             </Route>
+            <Route path="/migrate">
+              <Migrate/>
+            </Route>
+           
             {/* <Route path="/pools"> */}
             {/*  <Pools /> */}
             {/* </Route> */}

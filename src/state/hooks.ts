@@ -106,3 +106,8 @@ export const useTotalValue = (): BigNumber => {
   }
   return value
 }
+
+export const useOldMigrateBalance = (): string => {
+  const farms = useSelector((state: State) => state.migrate.data)
+  return farms
+}

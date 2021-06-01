@@ -27,4 +27,12 @@ export default {
     56: '0xe9e7cea3dedca5984780bafc599bd69add087d56',
     97: '0xE561aD9e9834AE1415A29A2Dd17EE661de224C4f',
   },
+  migrate: {
+    56: '0x589CF5aF1a74ec9E745a979F138603160Eb2eA7E',
+    97: '',
+  },
+  oldmigrate: {
+    56: '0xd99E6E78b613C2dAF2B0DE4f2EE09CCd6Bf06Cd4',
+    97: '',
+  },
 }

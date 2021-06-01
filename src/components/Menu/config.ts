@@ -30,6 +30,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/mining',
   },
+  {
+    label: 'Migrate',
+    icon: 'NftIcon',
+    href: '/migrate',
+  },
   // {
   //   label: 'Pools',
   //   icon: 'PoolIcon',
