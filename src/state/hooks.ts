@@ -86,7 +86,7 @@ export const usePriceCakeBusd = (): BigNumber => {
 export const usePriceCakeLpBusd = (): BigNumber => {
   const pid = 9 // CAKE-BUSD LP
   const farm = useFarmFromPid(pid)
-  return farm?.tokenPriceVsQuote ? new BigNumber(farm?.tokenPriceVsQuote) : ZERO
+  return new BigNumber(farm.tokenPriceVsQuote)
 }
 
 export const useTotalValue = (): BigNumber => {
