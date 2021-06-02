@@ -105,9 +105,9 @@ export const soushHarvestBnb = async (sousChefContract, account) => {
     })
 }
 
-export const migrateApproval = async (oldContract, account, value) => {
+export const migrateApproval = async (oldContract, account, toApprove, value) => {
   return oldContract.methods
-    .approve(account, value)
+    .approve(toApprove, value)
     .send({ from: account, value: new BigNumber(0) })
     .on('transactionHash', (tx) => {
       return tx.transactionHash
