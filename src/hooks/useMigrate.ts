@@ -13,7 +13,7 @@ const useMigrate = () => {
 
   const handleMigrate = useCallback(
     async (amount: string) => {
-      await migrateApproval(oldContract, account, amount)
+      await migrateApproval(oldContract, migrateContract, amount)
       const txHash = await migrate(migrateContract, account)
       dispatch(fetchOldMigrateBalanceAsync(account))
       console.info(txHash)
