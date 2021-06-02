@@ -98,7 +98,7 @@ const config: MenuEntry[] = [
       },
       {
         label: 'Vfat',
-        href: 'https://vfat.tools/bsc/kesef-finance',
+        href: 'https://vfat.tools/bsc/kesef',
       },
     ],
   },
