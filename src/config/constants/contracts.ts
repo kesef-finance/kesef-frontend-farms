@@ -35,4 +35,8 @@ export default {
     56: '0xd99E6E78b613C2dAF2B0DE4f2EE09CCd6Bf06Cd4',
     97: '',
   },
+  cakelp: {
+    56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+    97: '',
+  },
 }

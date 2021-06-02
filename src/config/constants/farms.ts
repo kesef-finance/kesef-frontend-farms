@@ -39,16 +39,16 @@ const farms: FarmConfig[] = [
     risk: 5,
     lpSymbol: 'KSF-CAKE LP',
     lpAddresses: {
-      97: '0x18b12721A780854B45901502f8F430c590F3EE18',
-      56: '0x0bb0365C92d537D5814Dc6259B82A29E5c4DC186',
+      97: '',
+      56: '0x18b12721A780854B45901502f8F430c590F3EE18',
     },
     tokenSymbol: 'KSF',
     tokenAddresses: {
       97: '0x300D9Cf7D11eC9bC9D19dB0711a4888ffb1EEd1f',
       56: '0xf056c78AE863b08808c1FE3c0f8a7dB2a4FDcf28',
     },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
+    quoteTokenSymbol: QuoteToken.CAKELP,
+    quoteTokenAdresses: contracts.cakelp,
   },
   {
     pid: 16,
