@@ -30,11 +30,11 @@ const config: MenuEntry[] = [
     icon: 'PoolIcon',
     href: '/mining',
   },
-  // {
-  //   label: 'Migrate',
-  //   icon: 'NftIcon',
-  //   href: '/migrate',
-  // },
+  {
+    label: 'Certik Audit ⌛',
+    icon: 'TicketIcon',
+    href: 'https://www.certik.org/projects/keseffinance',
+  },
   // {
   //   label: 'Pools',
   //   icon: 'PoolIcon',
