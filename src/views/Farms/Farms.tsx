@@ -8,7 +8,7 @@ import { Image, Heading, Text } from '@pancakeswap-libs/uikit'
 import { BLOCKS_PER_YEAR, CAKE_PER_BLOCK, CAKE_POOL_PID } from 'config'
 import FlexLayout from 'components/layout/Flex'
 import Page from 'components/layout/Page'
-import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceCakeLpBusd } from 'state/hooks'
+import { useFarms, usePriceBnbBusd, usePriceCakeBusd, usePriceCakeLpBusd, usePriceAdaBusd } from 'state/hooks'
 import useRefresh from 'hooks/useRefresh'
 import { fetchFarmUserDataAsync } from 'state/actions'
 import { QuoteToken } from 'config/constants/types'
@@ -27,6 +27,7 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
   const farmsLP = useFarms()
   const cakePrice = usePriceCakeBusd()
   const cakeLpPrice = usePriceCakeLpBusd()
+  const adaPrice = usePriceAdaBusd()
   const bnbPrice = usePriceBnbBusd()
   const { account, ethereum }: { account: string; ethereum: provider } = useWallet()
   const { tokenMode } = farmsProps
@@ -75,6 +76,10 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           totalValue = totalValue.times(cakeLpPrice)
         }
 
+        if (farm.quoteTokenSymbol === QuoteToken.ADA) {
+          totalValue = totalValue.times(adaPrice)
+        }
+
         if (totalValue.comparedTo(0) > 0) {
           apy = apy.div(totalValue)
         }
@@ -89,12 +94,13 @@ const Farms: React.FC<FarmsProps> = (farmsProps) => {
           bnbPrice={bnbPrice}
           cakePrice={cakePrice}
           cakeLpPrice={cakeLpPrice}
+          adaPrice={adaPrice}
           ethereum={ethereum}
           account={account}
         />
       ))
     },
-    [bnbPrice, account, cakePrice, cakeLpPrice ,ethereum],
+    [bnbPrice, account, cakePrice, cakeLpPrice, adaPrice ,ethereum],
   )
 
   return (

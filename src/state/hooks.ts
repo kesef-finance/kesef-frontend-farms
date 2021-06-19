@@ -89,11 +89,19 @@ export const usePriceCakeLpBusd = (): BigNumber => {
   return new BigNumber(farm.tokenPriceVsQuote)
 }
 
+export const usePriceAdaBusd = (): BigNumber => {
+  const pid = 23 // ADA-BUSD LP
+  const farm = useFarmFromPid(pid)
+  console.log(farm.tokenPriceVsQuote)
+  return new BigNumber(farm.tokenPriceVsQuote)
+}
+
 export const useTotalValue = (): BigNumber => {
   const farms = useFarms()
   const bnbPrice = usePriceBnbBusd()
   const cakePrice = usePriceCakeBusd()
   const cakeLpPrice = usePriceCakeLpBusd()
+  const adaPrice = usePriceAdaBusd()
   let value = new BigNumber(0)
   for (let i = 0; i < farms.length; i++) {
     const farm = farms[i]
@@ -107,6 +115,8 @@ export const useTotalValue = (): BigNumber => {
         val = cakePrice.times(farm.lpTotalInQuoteToken)
       } else if (farm.quoteTokenSymbol === QuoteToken.CAKELP) {
         val = cakeLpPrice.times(farm.lpTotalInQuoteToken)
+      } else if (farm.quoteTokenSymbol === QuoteToken.ADA) {
+        val = adaPrice.times(farm.lpTotalInQuoteToken)
       } else {
         val = farm.lpTotalInQuoteToken
       }

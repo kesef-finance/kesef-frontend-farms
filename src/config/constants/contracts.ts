@@ -39,4 +39,8 @@ export default {
     56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     97: '',
   },
+  ada: {
+    56: '0x3ee2200efb3400fabb9aacf31297cbdd1d435d47',
+    97: '',
+  },
 }

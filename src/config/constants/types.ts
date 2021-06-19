@@ -28,6 +28,7 @@ export enum QuoteToken {
   'UST' = 'UST',
   'KSF' = 'KSF',
   'CAKELP' = 'CAKELP',
+  'ADA' = 'ADA',
 }
 
 export enum PoolCategory {

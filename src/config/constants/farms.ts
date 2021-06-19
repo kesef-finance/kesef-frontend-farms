@@ -51,6 +51,22 @@ const farms: FarmConfig[] = [
     quoteTokenAdresses: contracts.cakelp,
   },
   {
+    pid: 22,
+    risk: 5,
+    lpSymbol: 'KSF-ADA LP',
+    lpAddresses: {
+      97: '',
+      56: '0x0540fc98C2055378369657Dce9C0Cc70c7E27572',
+    },
+    tokenSymbol: 'KSF',
+    tokenAddresses: {
+      97: '0x300D9Cf7D11eC9bC9D19dB0711a4888ffb1EEd1f',
+      56: '0xf056c78AE863b08808c1FE3c0f8a7dB2a4FDcf28',
+    },
+    quoteTokenSymbol: QuoteToken.ADA,
+    quoteTokenAdresses: contracts.ada,
+  },
+  {
     pid: 16,
     risk: 3,
     lpSymbol: 'BNB-BUSD LP',
@@ -193,6 +209,21 @@ const farms: FarmConfig[] = [
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
+  }, {
+    pid: 23,
+    risk: 4,
+    lpSymbol: 'ADA-BUSD LP',
+    lpAddresses: {
+      97: '',
+      56: '0xF35145e28e1dd67055221739D8554E0b5C7Adcd5',
+    },
+    tokenSymbol: 'ADA',
+    tokenAddresses: {
+      97: '',
+      56: '0x3EE2200Efb3400fAbB9AacF31297cBdD1d435D47',
+    },
+    quoteTokenSymbol: QuoteToken.BUSD,
+    quoteTokenAdresses: contracts.busd,
   },
   {
     pid: 0,
@@ -309,23 +340,6 @@ const farms: FarmConfig[] = [
     tokenAddresses: {
       97: '',
       56: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
-    },
-    quoteTokenSymbol: QuoteToken.BUSD,
-    quoteTokenAdresses: contracts.busd,
-  },
-  {
-    pid: 19,
-    risk: 1,
-    isTokenOnly: true,
-    lpSymbol: 'USDC',
-    lpAddresses: {
-      97: '',
-      56: '0x680dd100e4b394bda26a59dd5c119a391e747d18', // USDC-BUSD LP
-    },
-    tokenSymbol: 'USDC',
-    tokenAddresses: {
-      97: '',
-      56: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
